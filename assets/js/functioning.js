@@ -1,13 +1,15 @@
   // --- Authentication Part ---
   // Your web app's Firebase configuration
   var firebaseConfig = {
-    apiKey: "AIzaSyDBn5GMIvsqhTPMVAeylq-I_2R8SSJYzmI",
-    authDomain: "js-login-form.firebaseapp.com",
-    projectId: "js-login-form",
-    storageBucket: "js-login-form.appspot.com",
-    messagingSenderId: "1039987076182",
-    appId: "1:1039987076182:web:e51f940647b55c0cd7dff7",
+    apiKey: "AIzaSyCCo6cL8M-lQ9m7ZYCqUWL_F0yTpWSStDA",
+    authDomain: "canteen-9d5fc.firebaseapp.com",
+    projectId: "canteen-9d5fc",
+    storageBucket: "canteen-9d5fc.appspot.com",
+    messagingSenderId: "412897421395",
+    appId: "1:412897421395:web:91a4c629b68f8a3f153ea6",
+    measurementId: "G-FNC2SGCTS6"
   };
+
   
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);  
@@ -101,7 +103,7 @@
 
     static authRedirecting() {
       window.setTimeout(() => {
-        window.location.replace('https://mit-canteen.netlify.app/client-side');
+        window.location.replace('https://keerthismiley007.github.io/client-side');
       }, 500)
     }
 
@@ -118,7 +120,7 @@
     firebaseAuthRedirect(){
       firebase.auth().onAuthStateChanged(function(user) {
         // If user is registered -
-        user ?  window.location.replace('https://mit-canteen.netlify.app/client-side') : console.log('none');
+        user ?  window.location.replace('https://keerthismiley007.github.io/client-side') : console.log('none');
       });
     }
   }
@@ -229,7 +231,7 @@
             title: 'Logged Out Successfully',
           })
           firebase.auth().signOut().then(() => {
-            window.location.replace("https://mit-canteen.netlify.app/index.html")
+            window.location.replace("https://keerthismiley007.github.io/index.html")
           });
         });
       })
