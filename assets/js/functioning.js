@@ -103,7 +103,7 @@
 
     static authRedirecting() {
       window.setTimeout(() => {
-        window.location.replace('https://keerthismiley007.github.io/client-side');
+        window.location.replace('https://canteen-weld.vercel.app/client-side.html');
       }, 500)
     }
 
@@ -120,7 +120,7 @@
     firebaseAuthRedirect(){
       firebase.auth().onAuthStateChanged(function(user) {
         // If user is registered -
-        user ?  window.location.replace('https://keerthismiley007.github.io/client-side') : console.log('none');
+        user ?  window.location.replace('https://canteen-weld.vercel.app/client-side.html') : console.log('none');
       });
     }
   }
@@ -231,7 +231,7 @@
             title: 'Logged Out Successfully',
           })
           firebase.auth().signOut().then(() => {
-            window.location.replace("https://keerthismiley007.github.io/index.html")
+            window.location.replace("https://canteen-weld.vercel.app/index.html")
           });
         });
       })
