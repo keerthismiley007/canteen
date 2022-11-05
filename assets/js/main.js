@@ -494,7 +494,7 @@ function cartFunctionalities (addItem, trimedEmailID, addToCartBtn){
                 if (item.FoodID === id && item.Quantity >= 1){
                     item.Quantity -= 1;
                     if (item.Quantity === 0){
-                        if ( window.location != 'https://mit-canteen.netlify.app/user-orders.html'){
+                        if ( window.location != 'https://canteen-weld.vercel.app/user'){
                             // Enable Buttons - so user can use them again
                             // Enable removed items btn
                             addToCartBtn[item.FoodID-1].disabled = false;
@@ -652,7 +652,7 @@ function ClientDataFlow(addToCartBtn){
                         title: 'Order Successfully Recorded',
                     });
                     window.setTimeout(function(){
-                        window.location.replace('https://mit-canteen.netlify.app/user-orders.html')
+                        window.location.replace('https://canteen-weld.vercel.app/user-orders.html')
                     }, 2600)
                 } else {
                     Swal.fire({
@@ -663,7 +663,7 @@ function ClientDataFlow(addToCartBtn){
             })
 
             // Shows Orders
-            if (window.location.href === 'https://mit-canteen.netlify.app/user-orders.html'){
+            if (window.location.href === 'https://canteen-weld.vercel.app/user-orders.html'){
                 setOrderDetails(trimedEmailID)
             }
         } else {
